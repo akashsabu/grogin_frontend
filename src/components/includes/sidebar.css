@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+
+.sidebar_ham{
+    display: none;
+    width: 150px;
+    margin-top: 15px;  
+}
+.sidebar_ham button{
+    width: 100%;
+    font-size: 20px;
+    margin-left: 0px;
+    font-family: inter;
+    font-weight: 100;
+    
+}
+.sidebar_ham button span{
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+
+.sidebar {
+    width: 250px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    padding-right: 30px;
+
+}
+.sideHam_overlay{
+    /* display: none; */
+    height: 300vh;
+    width: 100vw;
+    position: absolute;
+    background: #00000015;
+    top: 0;
+    right: 0;
+}
+.sideHam_close{
+    justify-content: end;
+
+}
+.sideHam_close button {
+    width: fit-content;
+    height: fit-content;
+    font-size: 20px;
+    color: #000;
+    background: none;
+}
+
+
+.sideham {
+    display: block !important;
+    width: 50vw;
+    height: fit-content;
+    background: #ffffff;
+    position: absolute;
+    top: 20;
+    left: 0;
+    text-align: left;
+    z-index: 1;
+    box-sizing: border-box;
+    padding: 30px;
+}
+
+.price_filter,
+.product_categories,
+.filter_color,
+.filter_brand {
+
+    border-bottom: 1px solid #6b72804f;
+    padding-block: 15px;
+    color: #030712;
+    font-size: 14px;
+
+}
+
+.price_filter p,
+.product_categories p,
+.filter_color p,
+.filter_brand p,
+.product_status p {
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 0px;
+}
+
+.price_filter .min_price,
+.max_price {
+    width: 125px;
+}
+.price_filter .min_price div,
+.max_price div {
+    display: inline-flex;
+    margin: 0px;
+    height: 40px;
+    width: 110px;
+}
+.price_filter .price_div{
+    display: flex;
+    align-items: center;
+}
+.price_filter .price_div span{
+    display: inline-block;
+    width: 110px;
+    color: #6b7280;
+    font-size: 12px;
+    text-align: left;
+    margin-bottom: 5px;
+}
+.price_filter .price_div .seperator{
+    margin-block: 15px 0px;
+    width:fit-content;
+}
+
+
+.price_filter .min_price input,
+.price_filter .max_price input {
+    width: 100%;
+    padding: 1px 16px;
+    border: 1px solid rgb(209, 213, 219);
+    outline: none;
+    border-radius: 8px;
+
+    &:focus {
+        outline: 2px solid #634c9f;
+    }
+
+    ;
+}
+
+.slider {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+}
+
+
+.price_filter button{
+    background-color: #E5E7EB;
+    border: none;
+    color: #030712;
+    font-weight: bold;
+    padding: 7px 16px;
+    border-radius: 7px;
+}
+.price_filter button:hover{
+    background-color: #6b728057;
+}
+
+
+.product_categories ul {}
+
+.product_categories ul li {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    color: #030712;
+    margin-bottom: 5px;
+}
+
+.product_categories ul li input {
+    accent-color: #634c9f;
+
+}
+
+.product_categories ul li label {}
+
+.filter_color {}
+
+.filter_color ul {}
+
+.filter_color ul li {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #030712;
+    margin-bottom: 5px;
+
+}
+
+.filter_color ul li div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.filter_color ul li .colordot {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: green;
+}
+
+.filter_color ul li a,.filter_color ul li span {
+    color: #030712;
+}
+
+
+.filter_brand {
+    font-size: 14px;
+    color: #030712;
+
+}
+
+.filter_brand ul {}
+
+.filter_brand ul li { text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #030712;
+    margin-bottom: 5px;
+}
+
+.filter_brand ul li div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.filter_brand ul li input {}
+
+.filter_brand ul li label {}
+
+.filter_brand ul li span {}
+
+
+.product_status {
+    padding-block: 15px;
+}
+
+.product_status ul {}
+
+.product_status ul li {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    color: #030712;
+    margin-bottom: 5px;
+
+}
+
+.product_status ul li input {
+    accent-color: #634c9f;
+
+}
+
+.product_status ul li label {}
+
+
+@media all and (max-width: 992px) {
+    .sidebar{
+        display: none;
+    }
+    .sidebar_ham{
+        display: block;
+    }
+
+}
