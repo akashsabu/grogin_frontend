@@ -1,76 +1,152 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-
-import "./login.css";
-
+import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faLock, faUser } from "@fortawesome/free-solid-svg-icons";
+import styled from 'styled-components';
+
+
 import { login } from "../../../features/userSlice";
+import background from '../../../assets/images/authentication/login_bg.jpg'
+
 
 const Login = () => {
-  
-    const dispatch = useDispatch();
+  const dispatch = useDispatch();
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
-    const [username,setUsername] = useState("");
-    const [email ,setEmail] = useState("");
-    const [isLoggedIn ,setIsLoggedIn] = useState(false);
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-
-        dispatch(login({
-            name:username,
-            email:email,
-            is_logged_in:isLoggedIn,
-        }))
-
-    };
-
+    dispatch(
+      login({
+        name: username,
+        email: email,
+        is_logged_in: true,
+      })
+    );
+    navigate('/');
+  };
 
   return (
-    <div className="login">
-      <div className="login_left"></div>
-
-      <div className="login_right">
+    <LoginContainer>
+      <LeftContainer></LeftContainer>
+      <RightContainer>
         <h1>Login</h1>
-        <form id="login-form" onSubmit={handleSubmit}>
+        <Form id="login-form" onSubmit={handleSubmit}>
           <div className="form-group">
             <input
               type="text"
               id="username"
               placeholder="Username"
+              value={username}
               onChange={(e) => setUsername(e.target.value)}
               required
             />
             <FontAwesomeIcon icon={faUser} />
           </div>
-         
+
           <div className="form-group">
             <input
               type="email"
               id="email"
               placeholder="Email"
+              value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
             />
             <FontAwesomeIcon icon={faEnvelope} />
           </div>
-          
+
           <div className="form-group">
             <input
               type="password"
               id="password"
               placeholder="Password"
-              onChange={(e) => setUsername(e.target.value)}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               required
             />
             <FontAwesomeIcon icon={faLock} />
           </div>
-          <button type="submit" onClick={() => setIsLoggedIn(true)}>Login</button>
-        </form>
-      </div>
-    </div>
+          <button type="submit">Login</button>
+        </Form>
+      </RightContainer>
+    </LoginContainer>
   );
 };
+
+const LoginContainer = styled.div`
+  display: flex;
+  align-items: center;
+  margin: auto;
+`;
+
+const LeftContainer = styled.div`
+  height: 100vh;
+  width: 50%;
+  background-image: url(${background});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+`;
+
+const RightContainer = styled.div`
+  width: 30%;
+  margin: auto;
+  background: #76737321;
+  padding: 32px;
+  border-radius: 7px;
+
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+`;
+
+const Form = styled.form`
+  .form-group {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    color: #666;
+    border: 1px solid #ccc;
+    padding: 5px 15px 5px 5px;
+    border-radius: 7px;
+    background: #fff;
+
+    &:focus-within {
+      outline: 2px solid #634c9f;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 8px;
+      border-radius: 3px;
+      box-sizing: border-box;
+      border: none;
+      outline: none;
+    }
+  }
+
+  button {
+    width: 50%;
+    padding: 10px;
+    background-color: #634c9f;
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #644c9fea;
+    }
+  }
+`;
+
 
 export default Login;

@@ -85,15 +85,10 @@ const SideBar = () => {
   const minPrice = Math.min(...prices);
   const maxPrice = Math.max(...prices);
 
-  
-
   const [value, setValue] = useState([minPrice, maxPrice]);
   const handleChange = (event, newValue) => {
     setValue(newValue);
-    filterDataByPrice(newValue);
   };
-
-  
   const handleInputChange = (event, index) => {
     const newValue = [...value];
     newValue[index] =
@@ -199,7 +194,7 @@ const SideBar = () => {
                 getAriaValueText={valuetext}
                 min={minPrice}
                 max={maxPrice}
-                step={.1}
+                step={1}
               />
             </Box>
           </SliderDiv>
@@ -259,7 +254,7 @@ const SideBar = () => {
 
           <ul>
             {selectedCategories.length === 0
-              ? 
+              ? // Render selectedBrandArray if selectedBrands is empty
                 brandArray.map((brand) => (
                   <li key={brand}>
                     <div>

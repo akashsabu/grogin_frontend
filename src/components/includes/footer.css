@@ -22,7 +22,6 @@
 }
 
 .ftr_top{
-    padding: 50px 0px;
     border-bottom: 1px solid #6b72806d; 
 }
 
@@ -74,6 +73,9 @@ margin: 0px;
     background-color: #634c9f;
     color: #fff;
 }
+
+
+
 
 .ftr_center{
     border-bottom:1px solid #6b72806d;

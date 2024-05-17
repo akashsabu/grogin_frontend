@@ -1,20 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
 
 
-.sidebar_ham{
+.sidebar_ham {
     display: none;
     width: 150px;
-    margin-top: 15px;  
+    margin-top: 15px;
 }
-.sidebar_ham button{
+
+.sidebar_ham button {
     width: 100%;
     font-size: 20px;
     margin-left: 0px;
     font-family: inter;
     font-weight: 100;
-    
+
 }
-.sidebar_ham button span{
+
+.sidebar_ham button span {
     font-size: 18px;
     margin-left: 10px;
 }
@@ -29,7 +31,8 @@
     padding-right: 30px;
 
 }
-.sideHam_overlay{
+
+.sideHam_overlay {
     /* display: none; */
     height: 300vh;
     width: 100vw;
@@ -38,10 +41,12 @@
     top: 0;
     right: 0;
 }
-.sideHam_close{
+
+.sideHam_close {
     justify-content: end;
 
 }
+
 .sideHam_close button {
     width: fit-content;
     height: fit-content;
@@ -93,6 +98,7 @@
 .max_price {
     width: 125px;
 }
+
 .price_filter .min_price div,
 .max_price div {
     display: inline-flex;
@@ -100,11 +106,13 @@
     height: 40px;
     width: 110px;
 }
-.price_filter .price_div{
+
+.price_filter .price_div {
     display: flex;
     align-items: center;
 }
-.price_filter .price_div span{
+
+.price_filter .price_div span {
     display: inline-block;
     width: 110px;
     color: #6b7280;
@@ -112,9 +120,10 @@
     text-align: left;
     margin-bottom: 5px;
 }
-.price_filter .price_div .seperator{
+
+.price_filter .price_div .seperator {
     margin-block: 15px 0px;
-    width:fit-content;
+    width: fit-content;
 }
 
 
@@ -139,8 +148,13 @@
     justify-content: center;
 }
 
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
 
-.price_filter button{
+
+.price_filter button {
     background-color: #E5E7EB;
     border: none;
     color: #030712;
@@ -148,12 +162,15 @@
     padding: 7px 16px;
     border-radius: 7px;
 }
-.price_filter button:hover{
+
+.price_filter button:hover {
     background-color: #6b728057;
 }
 
 
 .product_categories ul {}
+
+
 
 .product_categories ul li {
     text-align: left;
@@ -171,6 +188,9 @@
 }
 
 .product_categories ul li label {}
+
+
+
 
 .filter_color {}
 
@@ -201,9 +221,13 @@
     background: green;
 }
 
-.filter_color ul li a,.filter_color ul li span {
+.filter_color ul li a,
+.filter_color ul li span {
     color: #030712;
 }
+
+
+
 
 
 .filter_brand {
@@ -214,7 +238,8 @@
 
 .filter_brand ul {}
 
-.filter_brand ul li { text-align: left;
+.filter_brand ul li {
+    text-align: left;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -262,10 +287,11 @@
 
 
 @media all and (max-width: 992px) {
-    .sidebar{
+    .sidebar {
         display: none;
     }
-    .sidebar_ham{
+
+    .sidebar_ham {
         display: block;
     }
 
