@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhoneVolume } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
-// import "./footer.css";
 
 import Google from "../../assets/images/footer/google-play-button.png";
 import Apple from "../../assets/images/footer/apple-store-button.png";

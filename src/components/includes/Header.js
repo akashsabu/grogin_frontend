@@ -315,7 +315,7 @@ const TopBanner = styled.div`
     font-size: 14px;
     font-weight: bold;
     color: white;
-    
+
     @media all and (max-width: 768px) {
       font-size: 12px;
     }
@@ -331,6 +331,11 @@ const CountDownTimer = styled.div`
 const Row1 = styled.div`
   height: 40px;
   border-bottom: 1px solid #6b72804f;
+
+  .flex {
+    display: flex;
+    justify-content: space-between;
+  }
 
   a {
     color: #6b7280;
@@ -369,6 +374,11 @@ const Row1 = styled.div`
 const Row2 = styled.div`
   padding-block: 5px;
   border-bottom: 1px solid #6b72804f;
+
+  .flex {
+    display: flex;
+    justify-content: space-between;
+  }
 
   a {
     width: 150px;
@@ -496,6 +506,11 @@ const HamburgerMenu = styled.div`
 const Row3 = styled.div`
   align-items: center;
   border-bottom: 1px solid #6b72804f;
+
+  .flex {
+    display: flex;
+    justify-content: space-between;
+  }
 `;
 
 const HamClose = styled.li`

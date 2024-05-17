@@ -3,7 +3,6 @@ import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import "./sidebar.css";
 
 import data from "../../assets/test data/data";
 import { useDispatch } from "react-redux";
